@@ -13,7 +13,7 @@ This MCP (Model Context Protocol) server provides intelligent access to the A6 B
 
 ## 📦 Deployment Information
 
-**Server URL**: `https://vads-mcp.a6lab.ai/sse`  
+**Server URL**: `https://a6-build-docs-mcp.brian-derfer.workers.dev/sse`  
 **Account**: AgileSix Cloudflare Account  
 **AutoRAG Instance**: `a6-build-docs-rag`  
 **R2 Data Source**: `a6-build-docs` bucket  
@@ -43,7 +43,7 @@ Add the following configuration to your `mcp.json` file:
 {
   "mcpServers": {
     "a6-build-docs": {
-      "url": "https://vads-mcp.a6lab.ai/sse"
+      "url": "https://a6-build-docs-mcp.brian-derfer.workers.dev/sse"
     }
   }
 }
