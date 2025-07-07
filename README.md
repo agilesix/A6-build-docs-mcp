@@ -63,19 +63,6 @@ Add the following configuration to your `mcp.json` file:
 
 ## 🔧 Available Tools
 
-### `searchDesignSystem`
-
-Search the A6 Build Docs knowledge base using natural language queries. This is the primary tool for general searches across all documentation.
-
-#### Parameters
-
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| **query** | `string` (required) | - | Your search query about A6 Build Docs content, documentation, guides, or any content in the knowledge base.<br/>**Examples:** "How do I implement feature X?", "What are the deployment requirements?", "Project documentation for Y" |
-| **autoragId** | `string` | `"a6-build-docs-rag"` | AutoRAG instance identifier. Use `"a6-build-docs-rag"` for A6 Build Docs.<br/>This determines which knowledge base gets searched. |
-| **maxResults** | `number` | `10` | Maximum document chunks to retrieve (1-50).<br/>**Recommended:** 5-15 for specific questions, 20-50 for research |
-| **scoreThreshold** | `number` | `0.3` | Minimum similarity score (0.0-1.0) for results:<br/>• `0.7-1.0`: High precision, very relevant matches<br/>• `0.5-0.7`: Balanced precision and recall (recommended)<br/>• `0.3-0.5`: High recall, broader results<br/>• `0.0-0.3`: Very broad searches |
-
 ### `searchGreenhouse`
 
 Search specifically within the Greenhouse folder for HR-related documentation, processes, and guides.
@@ -103,24 +90,20 @@ Generic search across all knowledge bases with optional folder filtering. Most f
 
 ## 📋 Example Queries
 
-### General Documentation
-- "How do I implement feature X in the A6 Build system?"
-- "What are the deployment requirements for A6 applications?"
-- "Security guidelines for A6 Build projects"
-
 ### Greenhouse-Specific Queries
 - "How do I set up Greenhouse integration?"
 - "Greenhouse API documentation and examples"
 - "Interview process workflow in Greenhouse"
+- "Greenhouse user management and permissions"
 
-### Folder-Filtered Searches
-- "API documentation" (using `searchAllKnowledgeBases` with `folderPath: "API"`)
+### General Searches
+- "API documentation" (using `searchAllKnowledgeBases`)
 - "Security protocols" (using `searchAllKnowledgeBases` with `folderPath: "Security"`)
 - "Deployment guides" (using `searchAllKnowledgeBases` with `folderPath: "Deployment"`)
 
 ## 🔍 Search Results
 
-All tools return raw search results optimized for fast access to source content:
+Both tools return raw search results optimized for fast access to source content:
 
 **Returns:**
 - Document chunks with similarity scores
@@ -150,6 +133,7 @@ All tools return raw search results optimized for fast access to source content:
 - Higher `scoreThreshold` values (0.6-0.8) for precise, targeted results
 - Use `searchGreenhouse` for HR-related queries to get more focused results
 - Use `searchAllKnowledgeBases` with `folderPath` for domain-specific searches
+- Since the knowledge base currently contains only Greenhouse content, both tools will return similar results
 
 ## 🏗️ Technical Architecture
 
