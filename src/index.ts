@@ -46,7 +46,7 @@ export class MyMCP extends McpAgent<Env> {
       searchOptions.filters = {
         type: "and",
         filters: [
-          { type: "gt", key: "folder", value: `${folderPath}/` },
+          { type: "gte", key: "folder", value: `${folderPath}/` },
           { type: "lte", key: "folder", value: `${folderPath}/z` }
         ]
       };
