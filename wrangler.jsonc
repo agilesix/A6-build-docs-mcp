@@ -25,8 +25,8 @@
 	},
 	"r2_buckets": [
 		{
-			"binding": "VADS_DOCS",
-			"bucket_name": "vads-docs"
+			"binding": "A6_BUILD_DOCS",
+			"bucket_name": "a6-build-docs"
 		}
 	],
 	"ai": {
