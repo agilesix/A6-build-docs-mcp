@@ -10,6 +10,7 @@
 import type { BaseTool } from "./base/BaseTool.js";
 import { type ToolContext, ToolRegistry } from "./base/types.js";
 import { GreenhouseSearchTool } from "./greenhouse/GreenhouseSearchTool.js";
+import { ReactAdminSearchTool } from "./react-admin/ReactAdminSearchTool.js";
 import { UniversalSearchTool } from "./universal/UniversalSearchTool.js";
 
 // Define the correct type for the registry locally
@@ -25,6 +26,7 @@ export function createTools(context: ToolContext): ConcreteToolRegistry {
   // Register all available tools here
   const toolClasses = [
     GreenhouseSearchTool,
+    ReactAdminSearchTool,
     UniversalSearchTool,
     // Add new tools here! Just import them above and add the class to this array
   ];
