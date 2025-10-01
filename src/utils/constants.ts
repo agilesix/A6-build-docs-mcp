@@ -11,6 +11,7 @@ export const MAX_AUTORAG_RESULTS = 20;
 export const FOLDER_PATHS = {
   GREENHOUSE: "Greenhouse",
   REACT_ADMIN: "react-admin-docs",
+  VA_STAGING: "VA-staging-review-launch-blocking-issues",
 } as const;
 
 export const SERVER_CONFIG = {
