@@ -12,6 +12,7 @@ export const FOLDER_PATHS = {
   GREENHOUSE: "Greenhouse",
   REACT_ADMIN: "react-admin-docs",
   VA_STAGING: "VA-staging-review-launch-blocking-issues",
+  TANGO: "Tango",
 } as const;
 
 export const SERVER_CONFIG = {
